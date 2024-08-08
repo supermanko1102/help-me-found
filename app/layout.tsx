@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// app/layout.tsx
+
+import React from "react";
+import { Metadata } from "next";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Restaurant Finder",
-  description: "Find restaurants near you",
+  title: "附近餐廳推薦",
+  description: "自動推薦您附近的優質餐廳",
 };
 
 export default function RootLayout({
@@ -15,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="zh-TW">
+      <body>
+        <main className="container mx-auto p-4">{children}</main>
+      </body>
     </html>
   );
 }
